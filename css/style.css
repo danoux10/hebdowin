@@ -1,0 +1,256 @@
+@keyframes big {
+  from {
+    transform: rotate(-10deg);
+  }
+  to {
+    transform: rotate(10deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+  font-family: sans-serif;
+}
+
+input[type=text] {
+  background: none;
+  border: none;
+}
+
+.btn {
+  padding: 0.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-color: #000;
+  transition: all ease 0.5s;
+}
+.btn:hover {
+  box-shadow: 2px 4px 2px #c0c0c0;
+  border: 1px solid #fff;
+  background: none;
+}
+
+.btn-login {
+  background: #6495ed;
+  box-shadow: 2px 4px 2px #6495ed;
+}
+.btn-login:hover {
+  color: #6495ed;
+}
+
+.btn-register {
+  background: #9370db;
+  box-shadow: 2px 4px 2px #9370db;
+}
+.btn-register:hover {
+  color: #9370db;
+}
+
+.btn-valid {
+  background: #ffff00;
+  box-shadow: 2px 4px 2px #ffff00;
+}
+.btn-valid:hover {
+  color: #ffff00;
+}
+
+.btn-up {
+  background: #ba5d00;
+  box-shadow: 2px 4px 2px #ba5d00;
+}
+.btn-up:hover {
+  color: #ba5d00;
+}
+
+.btn-down {
+  background: #0040ff;
+  box-shadow: 2px 4px 2px #0040ff;
+}
+.btn-down:hover {
+  color: #0059ff;
+}
+
+.btn-reset {
+  background: #dc143c;
+  box-shadow: 2px 4px 2px #dc143c;
+}
+.btn-reset:hover {
+  color: #dc143c;
+}
+
+.btn-up, .btn-down, .btn-reset {
+  border-color: #fff;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+header div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.form-ac {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  transition: opacity ease 0.5s;
+}
+.form-ac.close {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transform: scale(0);
+}
+.form-ac fieldset {
+  height: 8rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  position: relative;
+}
+.form-ac fieldset legend {
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  width: 6rem;
+}
+.form-ac fieldset .close {
+  cursor: pointer;
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-ac fieldset .close span {
+  position: absolute;
+  border-radius: 10px;
+  top: 45%;
+  width: 100%;
+  height: 5px;
+}
+.form-ac fieldset .close span:nth-child(1) {
+  transform: rotate(45deg);
+}
+.form-ac fieldset .close span:nth-child(2) {
+  transform: rotate(-45deg);
+}
+.form-ac fieldset span label {
+  cursor: pointer;
+}
+.form-ac fieldset span input[type=text]::-webkit-input-placeholder {
+  padding-left: 2px;
+}
+
+section {
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh;
+}
+section div {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  align-items: center;
+  justify-content: space-around;
+  margin: 5rem 0;
+}
+section div form fieldset {
+  border-radius: 10px;
+  width: 15rem;
+  height: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+section div form fieldset legend {
+  text-transform: uppercase;
+  border: 1px solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  width: 4rem;
+  height: 2rem;
+}
+section div form fieldset span {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@media screen and (min-width: 378px) {
+  header div {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  header div {
+    width: 34%;
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background: #c0c0c0;
+    color: #000;
+  }
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #000;
+    color: #fff;
+  }
+
+  .form-ac {
+    background: #000;
+  }
+
+  input[type=text] {
+    border-bottom: 1px solid #fff;
+    color: #fff;
+  }
+  input[type=text]::-webkit-input-placeholder {
+    color: #c0c0c0;
+  }
+
+  .close span {
+    background: #fff;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
