@@ -1403,3 +1403,10 @@
 {"ts":1666298215013,"action":"IDE_DEACTIVATED"}
 {"ts":1666298267034,"action":"IDE_ACTIVATED"}
 {"ts":1666298271817,"action":"IDE_DEACTIVATED"}
+{"ts":1666298303690,"action":"IDE_ACTIVATED"}
+{"ts":1666298320312,"action":"FILE_CLOSED","file":"/body.php","tags":{"FILE_LINE_OF_CODE":"31"}}
+{"ts":1666298320313,"action":"FILE_OPENED","file":"/view/login.html","tags":{"FILE_LINE_OF_CODE":"15"}}
+{"ts":1666298326717,"action":"IDE_DEACTIVATED"}
+{"ts":1666298334296,"action":"IDE_ACTIVATED"}
+{"ts":1666298350808,"action":"FILE_CLOSED","file":"/view/login.html","tags":{"FILE_LINE_OF_CODE":"15"}}
+{"ts":1666298350971,"action":"PROJECT_CLOSED","tags":{"PROJECT_NAME":"ov"}}
