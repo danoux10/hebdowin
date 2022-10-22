@@ -1,7 +1,18 @@
 @media screen and (min-width: 378px){
-  header{
-    div{
-      width: 90%;
+  #home-page{
+    header{
+      div{
+        width:50%;
+      }
+    }
+    .form-home{
+      width:30rem;
+    }
+  }
+  #information{
+    #player-information{
+      height:40rem;
+      top: 20%;
     }
   }
 }

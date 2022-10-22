@@ -37,3 +37,10 @@
   width:$size;
   height:$size;
 }
+
+@mixin close{
+  width: 0;
+  height: 0;
+  transform: scale(0);
+  opacity: 0;
+}
