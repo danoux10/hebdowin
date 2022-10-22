@@ -1,0 +1,474 @@
+//link btn
+.btn {
+  color: #000;
+  padding: .2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  border-color: #000;
+  transition: all ease .5s;
+
+  &:hover {
+    box-shadow: 2px 4px 2px #c0c0c0;
+    border: 1px solid #fff;
+    background: none;
+  }
+}
+
+//sublink btn login
+.btn-login {
+  background: $login;
+  @include shadow($login);
+
+  &:hover {
+    color: $login;
+  }
+}
+
+//sublink btn register
+.btn-register {
+  background: $register;
+  @include shadow($register);
+
+  &:hover {
+    color: $register;
+  }
+}
+
+//sublink btn valid
+.btn-valid {
+  background: $valid;
+  @include shadow($valid);
+
+  &:hover {
+    color: $valid;
+  }
+}
+
+//sublink btn reset
+.btn-reset {
+  background: $reset;
+  font-weight: normal;
+
+  &:hover {
+    color: $reserHover;
+  }
+}
+
+//sublink btn up down
+.btn-up, .btn-down {
+  width: 3rem;
+}
+
+//sublink btn cancel
+.btn-cancel {
+  background: $cancel;
+  @include shadow($cancel);
+
+  &:hover {
+    color: $cancel;
+  }
+}
+
+#home-page {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  //link header
+  header {
+    width: 50rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title-contatnt {
+      color: $light;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 50%;
+
+      h1 {
+        font-family: 'title';
+        letter-spacing: .1rem;
+        -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+        -webkit-mask-size: 200%;
+        animation: shine 4s infinite;
+        position: relative;
+      }
+
+      .underline {
+        //border:1px solid;
+        width: 100%;
+        height: .2rem;
+        border-radius: 10px;
+        margin-top: 1%;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          background-image: linear-gradient(var(--rotate), $tankLight 43%, #9370db);
+          animation: spin 2.5s linear infinite;
+        }
+      }
+
+    }
+
+    div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      margin-top: 2rem;
+    }
+  }
+
+  //link form
+  .form-home {
+    position: absolute;
+    transform: none;
+    opacity: 1;
+    border: 1px solid $light;
+    width: 60%;
+    height: 150%;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    border-radius: 10px;
+    color: $light;
+    transition: all ease .5s;
+    @include shadow($light);
+
+    &.close {
+      width: 0;
+      height: 0;
+      transform: scale(0);
+      opacity: 0;
+    }
+
+    legend {
+      @include shadow($light);
+      border: 1px solid $light;
+      border-radius: 50px;
+      padding: .5rem;
+      text-align: center;
+    }
+
+    .close-btn{
+      cursor:pointer;
+      width:2rem;
+      height:2rem;
+      position: absolute;
+      right:5%;
+      &:hover{
+        span{
+          background: yellow;
+        }
+      }
+      span{
+        transition: all ease .5s;
+        background: $light;
+        position: absolute;
+        border-radius: 10px;
+        top:45%;
+        width:100%;
+        height:5px;
+        &:nth-child(1){
+          transform: rotate(45deg);
+        }
+        &:nth-child(2){
+          transform: rotate(-45deg);
+        }
+      }
+    }
+
+    form {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      span {
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+
+        input[type='text'] {
+          border-bottom: 1px solid $light;
+          padding-left: 4px;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+//link info win
+#player-information {
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 95vh;
+  //sublink title pseudo
+  h1 {
+    .bonjour {
+      margin-right: .5rem;
+      font-family: 'welcom';
+      font-size: xx-large;
+    }
+
+    .pseudo {
+      @include shining;
+      font-size: xx-large;
+      font-family: 'pseudo';
+      text-transform: uppercase;
+      letter-spacing: .1rem;
+    }
+  }
+
+  //sublink role containt
+  .role-containt {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: space-around;
+    margin: 5rem 0;
+
+    .role {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      height: 15rem;
+
+      .role-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 2px solid;
+        padding: 1rem;
+        border-radius: 50px;
+
+        i {
+          font-size: x-large;
+        }
+
+        &#tank {
+          @include borderTL($tankLight);
+          @include borderBR($tankDark);
+
+          i {
+            color: $tankLight;
+          }
+        }
+
+        &#dps {
+          @include borderTL($dpsLight);
+          @include borderBR($dpsDark);
+
+          i {
+            color: $dpsLight;
+          }
+        }
+
+        &#heal {
+          @include borderTL($healLight);
+          @include borderBR($healDark);
+
+          i {
+            color: $healLight;
+          }
+        }
+      }
+
+      form {
+        fieldset {
+          background: #000;
+          border-radius: 10px;
+          width: 15rem;
+          height: 10rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-around;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            width: 15.4rem;
+            height: 10.4rem;
+            z-index: -1;
+            border-radius: 10px;
+          }
+
+          &.tank-containt {
+            color: $tankLight;
+
+            &::before {
+              background-image: linear-gradient(var(--rotate), $tankLight 43%, $tankDark);
+              animation: spin 2.5s linear infinite;
+            }
+
+            .btn-down {
+              background: $tankLight;
+              @include shadow($tankLight);
+
+              &:hover {
+                color: $tankLight;
+                background: none;
+                border: none;
+              }
+            }
+
+            .btn-up {
+              background: $tankDark;
+              @include shadow($tankDark);
+
+              &:hover {
+                color: $tankDark;
+                background: none;
+                border: none;
+              }
+            }
+          }
+
+          &.dps-containt {
+            color: $dpsLight;
+
+            &::before {
+              background-image: linear-gradient(var(--rotate), $dpsLight 43%, $dpsDark);
+              animation: spin 2.5s linear infinite;
+            }
+
+            .btn-down {
+              background: $dpsLight;
+              @include shadow($dpsLight);
+
+              &:hover {
+                background: none;
+                color: $dpsLight;
+                border: none;
+              }
+            }
+
+            .btn-up {
+              background: $dpsDark;
+              @include shadow($dpsDark);
+
+              &:hover {
+                background: none;
+                color: $dpsDark;
+                border: none;
+              }
+            }
+          }
+
+          &.heal-containt {
+            color: $healDark;
+
+            &::before {
+              background-image: linear-gradient(var(--rotate), $healDark 43%, $healLight);
+              animation: spin 2.5s linear infinite;
+            }
+
+            .btn-down {
+              background: $healDark;
+              @include shadow($healDark);
+
+              &:hover {
+                color: $healDark;
+                border: none;
+                background: none;
+              }
+            }
+
+            .btn-up {
+              background: $healLight;
+              @include shadow($healLight);
+
+              &:hover {
+                color: $healLight;
+                border: none;
+                background: none;
+              }
+            }
+          }
+
+          span {
+            display: flex;
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            h3 {
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//link cancel popup
+#confirm-popup {
+  position: absolute;
+  background: #000;
+  border: 1px solid;
+  top: 50%;
+  left: 40%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 5rem;
+  border-radius: 10px;
+  transition: opacity ease .5s;
+
+  &.close {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transform: scale(0);
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+
+    button, span {
+      width: 4rem;
+      text-align: center;
+    }
+  }
+}
+
+
+//link a delete
+#home-page,#information{
+  &.close{
+    width:0;
+    height:0;
+    transform: scale(0);
+  }
+}

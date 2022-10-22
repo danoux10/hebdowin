@@ -1,7 +1,30 @@
-@import "animation";
-@import "reset";
-@import "general";
-@import "mobile";
-@import "laptop";
-@import "light";
-@import "dark";
+//link reset&font
+//subanchor reset
+@import "reset&font/reset";
+//subanchor font
+@import "reset&font/font";
+
+//link variable&autre
+//subanchor function
+@import "variable&autre/function";
+//subanchor keyframes
+@import "variable&autre/keyframes";
+//subanchor mixin
+@import "variable&autre/mixin";
+//subanchor property
+@import "variable&autre/property";
+//subanchor variable
+@import "variable&autre/variable";
+
+//link background
+@import "background";
+
+//link responcive
+//subanchor general
+@import "responcive/general";
+//subanchor mobile
+@import "responcive/mobile";
+//anchor laptop
+@import "responcive/laptop";
+
+

@@ -3,9 +3,15 @@
   padding:0;
   box-shadow: none;
   font-family: sans-serif;
+  font-weight: normal;
 }
 
 input[type="text"]{
   background: none;
   border: none;
 }
+
+fieldset{
+  border:none;
+}
+
