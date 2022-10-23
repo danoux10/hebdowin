@@ -14,6 +14,7 @@
 <?php include_once '../config/database.php'; ?>
 <?php include_once 'function/register.php'; ?>
 <?php include_once 'function/login.php'; ?>
-<?php include_once 'function/information.php'?>
+<?php include_once 'function/loginSelect.php'; ?>
+<?php include_once 'function/information.php'; ?>
 <body>
 <?php include_once '../model/background.html'; ?>
