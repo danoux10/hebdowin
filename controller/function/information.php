@@ -1,6 +1,6 @@
 <?php
 	$getInfo = $bdd->prepare('SELECT * FROM player where idUser=?');
-	$getInfo->execute([$_SESSION['idUser']]);
+	$getInfo->execute([$_COOKIE['pseudo']]);
 	foreach ($getInfo as $data){
 		$pseudo = $data['pseudo'];
 		$tankWin = $data['tankData'];
@@ -17,12 +17,12 @@
 
 	if(isset($tankSub)){
 		$tankWin--;
-		$updateTank->execute([$tankWin,$_SESSION['idUser']]);
+		$updateTank->execute([$tankWin,$_COOKIE['pseudo']]);
 	}
 	
 	if(isset($tankAdd)){
 		$tankWin++;
-		$updateTank->execute([$tankWin,$_SESSION['idUser']]);
+		$updateTank->execute([$tankWin,$_COOKIE['pseudo']]);
 	}
 	
 	//link dsp
@@ -33,12 +33,12 @@
 	
 	if(isset($dpsSub)){
 		$dpsWin--;
-		$updateDps->execute([$dpsWin,$_SESSION['idUser']]);
+		$updateDps->execute([$dpsWin,$_COOKIE['pseudo']]);
 	}
 	
 	if(isset($dpsAdd)){
 		$dpsWin++;
-		$updateDps->execute([$dpsWin,$_SESSION['idUser']]);
+		$updateDps->execute([$dpsWin,$_COOKIE['pseudo']]);
 	}
 
 	//link heal
@@ -49,12 +49,12 @@
 	
 	if(isset($healSub)){
 		$healWin--;
-		$updateHeal->execute([$healWin,$_SESSION['idUser']]);
+		$updateHeal->execute([$healWin,$_COOKIE['pseudo']]);
 	}
 	
 	if(isset($healAdd)){
 		$healWin++;
-		$updateHeal->execute([$healWin,$_SESSION['idUser']]);
+		$updateHeal->execute([$healWin,$_COOKIE['pseudo']]);
 	}
 
 //link reset
@@ -64,5 +64,5 @@
 		$tankWin = 0;
 		$dpsWin = 0;
 		$healWin = 0;
-		$hebdoReset->execute([$tankWin,$dpsWin,$healWin]);
+		$hebdoReset->execute([$tankWin,$dpsWin,$healWin,$_COOKIE['pseudo']]);
 	}

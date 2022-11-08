@@ -1,10 +1,6 @@
 <?php include_once '../controller/header.php';?>
 <main id="home-page">
 	<header>
-		<h2>
-			<?php echo $_SESSION['idUser'];?>
-			<?php echo $reponce; ?>
-		</h2>
 		<div class="title-contatnt" id="titre">
 			<h1>Bienvenue sur HebdoWin</h1>
 			<span class="underline"></span>

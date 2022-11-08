@@ -16,3 +16,11 @@
     }
   }
 }
+
+@media screen and (min-width:378px) and (orientation: landscape){
+  #information{
+    #player-information {
+      top: 2%;
+    }
+  }
+}

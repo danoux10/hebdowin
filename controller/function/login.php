@@ -9,7 +9,7 @@ if(isset($validLogin)){
 		$pseudo = $dataLogin['pseudo'];
 		$idUser = $dataLogin['idUser'];
 		if($pseudoLogin === $pseudo){
-			$_SESSION['idUser'] = $idUser;
+			setcookie('pseudo',$idUser);
 			header('Location: ../view/information.php');
 		}
 		else{
