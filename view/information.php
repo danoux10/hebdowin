@@ -14,7 +14,7 @@
 					</span>
 				<form action="#" method="post">
 					<fieldset class="tank-containt">
-							<span>
+						<span>
 							<button type="submit" name="tank_down" class="btn btn-down"><i class="fa-solid fa-minus"></i></button>
 							<h3><?php echo $tankWin; ?></h3>
 							<button type="submit" name="tank_up" class="btn btn-up"><i class="fa-solid fa-plus"></i></button>
